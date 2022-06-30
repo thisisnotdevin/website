@@ -1,0 +1,77 @@
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 3s;
+    --typewriterCharacters: 24;
+  }
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body{
+      height: calc(100vh - 8em);
+      padding: 4em;
+      color: rgba(0, 0, 0, 0.75);
+      font-family: 'Annonymous Pro', monospace;
+      background: var(--bg-color);
+      display: grid;
+      place-content: center;
+      text-align: center;
+}
+
+.line {
+      position: relative;
+      top: 50%;
+      width: 16em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(0, 0, 0, 0.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+}
+
+.anim-typewriter {
+    font-size: 3rem;
+    animation: typewriter 1.4s steps(40) 1s 1 normal both,
+    blinkTextCursor 700ms steps(40) infinite normal;
+}
+  
+.subtitle {
+color: hsl(0 0% 0% / 0.7);
+font-size: 1.5rem;
+font-weight: 400;
+opacity: 0;
+transform: translateY(3rem);
+animation: fadeInUp 2s ease var(--typewriterSpeed) forwards;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    } to {
+        width: 14em;
+    }
+  }
+@keyframes fadeInUp{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes blinkTextCursor {
+      from {
+          border-right-color: rgba(0, 0, 0, 0.75);
+      } to {
+          border-right-color: transparent;
+      }
+  }
+  
+
+
+
+  
+  
